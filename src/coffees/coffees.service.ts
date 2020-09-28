@@ -1,5 +1,5 @@
 import { HttpException, HttpStatus, Injectable, NotFoundException } from '@nestjs/common';
-import { Coffee } from '../entities/coffee.entitie';
+import { Coffee } from './entities/coffee.entitie';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import { UpdateCoffeeDto } from './dto/update-coffee.dto';
