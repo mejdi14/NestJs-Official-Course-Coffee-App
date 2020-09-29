@@ -10,6 +10,9 @@ export class Coffee {
   @Column()
   name: string;
 
+  @Column({ nullable: true})
+  discription: string;
+
   @Column()
   brand: string;
 
