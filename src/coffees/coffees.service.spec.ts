@@ -44,13 +44,12 @@ describe('CoffeesService', () => {
       });
     });
     describe('otherwise, this mean when the object does not exist', () => {
-      it('should throw an exception', async (done) => {
+      it('should throw an exception', async () => {
         const coffeeId = '1';
         coffeeRepository.findOne.mockReturnValue(undefined);
 
         try {
           await service.findOne(coffeeId);
-          done();
         } catch (err) {
           expect(err).toBeInstanceOf(NotFoundException);
           expect(err.message).toEqual(`Coffee #${coffeeId} not found`);
